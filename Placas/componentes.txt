@@ -1,0 +1,4 @@
+Microcontrolador: esp32-S3-mini
+Encoder:
+Giroscópio:
+Drivers:
