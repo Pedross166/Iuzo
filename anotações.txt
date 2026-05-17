@@ -1,0 +1,37 @@
+Inspirações japonesas:
+  Robô muito largo (a roda passa o sensor lateral)
+  Maxon dcx12
+  turbina antivibração
+  robô compacto (baixo comprimento)
+  saia grande
+  bateria 4s gaoneng
+  motor kyosho
+
+Inspirações exóticas
+  roda de impressora
+  engrenagem a laser (material: acrílico)
+  cubo em resina
+  prender a bateria com velcro
+
+Inspirações da opr
+locomoção modular
+buck na placa
+
+Jeitinho brasileiro
+Ponte de TPU
+placa frontal curvada (16 sensores)
+pinhão de latão
+esp32 mini
+encoder direto no mancal
+switch enable
+giroscópio centralizado
+cor de led conforme o risco (verde, amarelo e vermelho)
+
+
+Pesquisas para o futuro
+encoder
+driver
+rolamentos
+
+
+Referências:
