@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "portal_seguidor",
+			"path": "../../../portal_seguidor/portal_seguidor"
+		}
+	],
+	"settings": {}
+}
