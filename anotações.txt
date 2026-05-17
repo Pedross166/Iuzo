@@ -14,24 +14,27 @@ Inspirações exóticas
   prender a bateria com velcro
 
 Inspirações da opr
-locomoção modular
-buck na placa
+  locomoção modular
+  buck na placa
 
 Jeitinho brasileiro
-Ponte de TPU
-placa frontal curvada (16 sensores)
-pinhão de latão
-esp32 mini
-encoder direto no mancal
-switch enable
-giroscópio centralizado
-cor de led conforme o risco (verde, amarelo e vermelho)
+  Ponte de TPU
+  placa frontal curvada (16 sensores)
+  pinhão de latão
+  esp32 mini
+  encoder direto no mancal
+  switch enable
+  giroscópio centralizado
+  cor de led conforme o risco (verde, amarelo e vermelho)
 
 
 Pesquisas para o futuro
-encoder
-driver
-rolamentos
+  encoder
+  driver
+  rolamentos
 
-
-Referências:
+Sites de referencia:
+    https://www.ntf.or.jp/mouse/micromouse2024/Robot/AllJapan/TechRT61.html (Appolon 2024)
+    https://www.ntf.or.jp/mouse/micromouse2025/Robot/AllJapan/TechRT68.html (Appolon 2025)
+    https://exoticteam.com.mx/en (Atlas)
+    https://github.com/oprobots (fujitora)
