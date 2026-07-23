@@ -1,5 +1,5 @@
 #ifndef __CONTROLE_H_
-#define __CONTROLE_H
+#define __CONTROLE_H_
 
 #include "pinout.h"
 #include "motores.h"
