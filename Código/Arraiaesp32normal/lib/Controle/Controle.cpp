@@ -22,7 +22,7 @@ void ControladorPID::Define_kd(double novo_kd){
 }
 
 void ControladorPID::Define_ki(double novo_ki){
-  kd = novo_ki;
+  ki = novo_ki;
 }
 
 void define_tensao_base(double nova_tensao){
