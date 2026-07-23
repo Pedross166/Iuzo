@@ -63,7 +63,7 @@ void incrementa_contador_direito(){
         inicou_volta = millis();
     }
     if (contador_dir == 1){
-        unsigned long int tempo_volta = (millis() - inicou_volta)*1000;
+        unsigned long int tempo_volta = (millis() - inicou_volta)/1000;
 
         String message = "Tempo da volta" + String(tempo_volta) + "s\n";
         send_bluetooth_message(message);
