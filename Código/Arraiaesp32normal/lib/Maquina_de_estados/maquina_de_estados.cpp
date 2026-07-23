@@ -127,7 +127,7 @@ void central_de_comando(){
             atualiza_tensao_bateria();
         }
     }
-    else if (estado == PRE_CORRIDA){
+    if (estado == PRE_CORRIDA){
         if (comando == "STOP") troca_estado(PARAR);
     }
     else if (estado == CORRIDA){

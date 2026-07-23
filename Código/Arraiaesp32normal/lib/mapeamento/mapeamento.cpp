@@ -23,10 +23,10 @@ void atualiza_SL(){
     else if (!sl_esq_le_branco && !sl_dir_le_branco){
         estado_atual = NADA;
     }
-    else if (sl_esq_le_branco && !sl_esq_le_branco){
+    else if (sl_esq_le_branco && !sl_dir_le_branco){
         estado_atual = ESQUERDO;
     }
-    else if (!sl_esq_le_branco && sl_esq_le_branco){
+    else if (!sl_esq_le_branco && sl_dir_le_branco){
         estado_atual = DIREITO;
     }
 }
