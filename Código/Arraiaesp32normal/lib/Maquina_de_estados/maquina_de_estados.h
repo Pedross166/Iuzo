@@ -11,8 +11,7 @@
 #include "encoder.h"
 #include "mapeamento.h"
 
-enum estados
-{
+enum estados{
     INICIALIZACAO,
     CALIBRACAO,
     CONFIGURACAO,
@@ -32,5 +31,6 @@ void configuracao();
 void pre_corrida();
 void corrida();
 void parar();
+void central_de_comando();
 
 #endif

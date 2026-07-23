@@ -7,6 +7,8 @@
 #include "bluetooth.h"
 #include <string>
 
+#define TEM_MOSFET      false
+
 //Linha
 #define BRANCO                       1
 #define PRETO                        0
@@ -38,6 +40,10 @@ struct sensor_lateral{
 };
 extern sensor_lateral SL;
 
+#if TEM_MOSFET
+void liga_sensores();
+void desliga_sensores();
+#endif
 
 void sensores_init();
 void calibra_sensores();

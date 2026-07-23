@@ -3,6 +3,7 @@
 #include "motores.h"
 #include "bateria.h"
 #include "pinout.h"
+#include <FreeRTOS.h>
 
 void setup() {
   Serial.begin(9600);

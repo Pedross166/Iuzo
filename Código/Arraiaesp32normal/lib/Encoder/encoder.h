@@ -15,8 +15,8 @@
 extern ESP32Encoder encoder_direito;
 extern ESP32Encoder encoder_esquerdo;
 
-extern float distancia_atual[2];
-extern float ultima_distancia[2];
+extern float ultima_distancia_d;
+extern float ultima_distancia_e;
 
 void init_encoder();
 void reseta_encoders();

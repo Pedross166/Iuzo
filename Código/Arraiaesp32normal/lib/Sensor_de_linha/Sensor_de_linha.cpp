@@ -3,20 +3,29 @@
 sensor_frontal SF;
 sensor_lateral SL;
 
-int contador_esq;
-int contador_dir;
-int cruzamento;
+#if TEM_MOSFET
+void liga_sensores(){
+    digitalWrite(MOSFET_SENSOR, HIGH);
+}
+void desliga_sensores(){
+    digitalWrite(MOSFET_SENSOR, LOW);
+}
+#endif
 
 void sensores_init(){
     pinMode(SENSOR_LATERAL_DIR_1, INPUT);
     pinMode(SENSOR_LATERAL_DIR_2, INPUT);
     pinMode(SENSOR_LATERAL_ESQ_1, INPUT);
     pinMode(SENSOR_LATERAL_ESQ_2, INPUT);
+
+    #if TEM_MOSFET
+    pinMode(MOSFET_SENSOR, OUTPUT);
+    #endif
+    
     ADC_setup();
 }
 
 void calibra_sensores(){
-
     // Reseta calibração
     for (int i = 0; i < N_SENSORES_FRONTAIS; i++)
     {

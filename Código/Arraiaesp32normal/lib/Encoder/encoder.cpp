@@ -33,5 +33,13 @@ float calculaDistancia(ESP32Encoder encoder){
 }
 
 float calculaVelocidade(ESP32Encoder encoder){
-    float velocidade = 
+    float distancia_atual = calculaDistancia(encoder);
+    float velocidade = 0;
+    if (&encoder == &encoder_direito){
+        velocidade = (distancia_atual - ultima_distancia_d)/AMOSTRAGEM_ENCODER;
+    }
+    else if (&encoder == &encoder_esquerdo){
+        velocidade = (distancia_atual - ultima_distancia_e)/AMOSTRAGEM_ENCODER;
+    }
+    return velocidade;
 }

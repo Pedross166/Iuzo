@@ -12,11 +12,13 @@
 #define pino_1_turbina                 13
 #define pino_2_turbina                 12
 
-//ADC
+//ADC e sensores frontais
+#define MOSFET_SENSOR                  30
 #define ADC_SLCK                       41
 #define ADC_DIN                        42
 #define ADC_DOUT                       40
 #define ADC_CS                         39
+
 
 //Sensores laterais
 #define SENSOR_LATERAL_ESQ_1            6

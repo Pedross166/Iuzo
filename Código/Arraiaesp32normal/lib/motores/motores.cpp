@@ -50,7 +50,6 @@ void curva(float potencia, float intensidade_de_curva){
     motor_esquerdo.Aciona(potencia + intensidade_de_curva);
 }
 
-
 void testa_motores(){
     //Função que testa se os motores estão com a pinagem correta
     

@@ -1,6 +1,6 @@
 #include "mapeamento.h"
 
-bool inicou_volta = false;
+unsigned long int inicou_volta;
 
 int contador_esq = 0;
 int contador_dir = 0;
@@ -32,6 +32,45 @@ void atualiza_SL(){
 }
 
 void atualiza_contadores_sl(){
+    if (estado_anterior == CRUZAMENTO){
+        if (estado_atual != CRUZAMENTO) incrementa_contador_cruzamentos();
+    }
+    else if (estado_anterior == DIREITO){
+        if (estado_atual == ESQUERDO) incrementa_contador_cruzamentos();
+        else if (estado_atual == NADA) incrementa_contador_direito();
+    }
+    else if (estado_anterior == ESQUERDO){
+        if (estado_atual == DIREITO) incrementa_contador_cruzamentos();
+        else if (estado_atual == NADA) incrementa_contador_esquerdo();
+    }
 
+}
 
+void incrementa_contador_esquerdo(){
+    contador_esq++;
+    float distancia_direita = calculaDistancia(encoder_direito);
+    float distancia_esquerda = calculaDistancia(encoder_esquerdo);
+    float distancia_total = (distancia_direita + distancia_esquerda)/2;
+
+    String message = "Marcador esquerdo nº " + String(contador_esq) + " a distancia " + String(distancia_total) + "\n";
+    send_bluetooth_message(message);
+}
+
+void incrementa_contador_direito(){
+    if(contador_dir == 0){
+        reseta_encoders();
+
+        inicou_volta = millis();
+    }
+    if (contador_dir == 1){
+        unsigned long int tempo_volta = (millis() - inicou_volta)*1000;
+
+        String message = "Tempo da volta" + String(tempo_volta) + "s\n";
+        send_bluetooth_message(message);
+    }
+    contador_dir++;
+}
+
+void incrementa_contador_cruzamentos(){
+    contador_cruzamentos++;
 }
