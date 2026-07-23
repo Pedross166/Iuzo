@@ -7,7 +7,7 @@
 #include "bateria.h"
 #include "Controle.h"
 #include "led.h"
-#include "sensor_de_linha.h"
+#include "Sensor_de_linha.h"
 #include "encoder.h"
 #include "mapeamento.h"
 

@@ -41,7 +41,7 @@ uint16_t comanda_ADC(uint16_t comando){
 }
 
 uint16_t le_ADC(uint16_t endereco){
-    if (endereco < 4) endereco = 3 - endereco;
+    if (endereco < 4) endereco = 3 - endereco; //inversão ocorre devido ao posicionamento dso sensores na placa
     uint16_t comando = gera_commando_para_ADC(endereco);
     comanda_ADC(comando);
 
