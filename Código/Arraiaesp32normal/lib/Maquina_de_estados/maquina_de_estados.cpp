@@ -72,9 +72,14 @@ void configuracao(){
 }
 
 void corrida(){
+    PID_simples.tempo_atual = micros();
+
     atualiza_SL();
     atualiza_contadores_sl();
+    
+    if (PID_simples.tempo_atual - PID_simples.ultima_leitura >= TAXA_ATUALIZACAO_PID){
     curva(tensao_base, PID_simples.Correcao(calcula_posicao()));
+    }
 
     if (contador_dir >= 2) {
         float distancia_direita = calculaDistancia(encoder_direito);
