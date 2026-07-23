@@ -9,13 +9,13 @@
 
 //valor bom para 1.4V kp = 0.685 e kd = 0.00205
 // Macros
-#define TENSAO_BASE                         3.0
-#define TENSAO_TURBINA                      4.0
+#define TENSAO_BASE                         1.5
+#define TENSAO_TURBINA                      0.0
 
 //PID simples de posição
 #define ALVO_PID                            0.0
-#define KP                                  0.8
-#define KD                                  0.0005
+#define KP                                  0.6
+#define KD                                  0.0002
 #define KI                                  0.0
 #define TAXA_ATUALIZACAO_PID                2 //ms
 
