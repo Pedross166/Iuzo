@@ -80,6 +80,8 @@ void corrida(){
     if (PID_simples.tempo_atual - PID_simples.ultima_leitura >= TAXA_ATUALIZACAO_PID){
     curva(tensao_base, PID_simples.Correcao(calcula_posicao()));
     }
+    
+    send_bluetooth_message(String(PID_simples.tempo_atual - PID_simples.ultima_leitura));
 
     if (contador_dir >= 2) {
         float distancia_direita = calculaDistancia(encoder_direito);
