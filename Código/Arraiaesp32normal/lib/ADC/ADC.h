@@ -24,6 +24,15 @@
 
 #define N_MEDIDAS               2
 
+#if robo == BIAV1
+// Macros dos sensores
+#define N_SENSORES_FRONTAIS     9
+#define N_SENSORES_LATERAIS     4
+#endif
+
+#if robo == BIARO || ARRAIA
+#define N_SENSORES_FRONTAIS     16
+#endif
 
 void ADC_setup();
 void testa_ADC();

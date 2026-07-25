@@ -2,10 +2,20 @@
 
 CRGB leds[NUMERO_DE_LEDS];
 
+#if robo == BIARO
+CRGB ledsprincipal[3];
+#endif
+
 void led_setup() {
     FastLED.addLeds<NEOPIXEL, pino_led>(leds, NUMERO_DE_LEDS);
     leds[0] = CRGB(WHITE);
 	leds[1] = CRGB(WHITE);
+    #if robo == BIARO
+    FastLED.addLeds<NEOPIXEL, pino_led_principal>(leds, 3);
+    ledsprincipal[0] = CRGB(GREEN);
+    ledsprincipal[1] = CRGB(YELLOW);
+    ledsprincipal[2] = CRGB(RED);
+    #endif
 	FastLED.show();
 }
 

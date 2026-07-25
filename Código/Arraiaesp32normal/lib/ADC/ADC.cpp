@@ -41,7 +41,9 @@ uint16_t comanda_ADC(uint16_t comando){
 }
 
 uint16_t le_ADC(uint16_t endereco){
+    #if robo == BIAV1
     if (endereco < 4) endereco = 3 - endereco; //inversão ocorre devido ao posicionamento dso sensores na placa
+    #endif
     uint16_t comando = gera_commando_para_ADC(endereco);
     comanda_ADC(comando);
 
@@ -61,7 +63,7 @@ uint16_t le_sensor(uint16_t endereco){
 }
 
 void testa_ADC(){
-    for (int sensor_atual= 0; sensor_atual < 9; sensor_atual++){
+    for (int sensor_atual= 0; sensor_atual < N_SENSORES_FRONTAIS; sensor_atual++){
         int leitura = le_sensor(sensor_atual);
         Serial.printf("Sensor %d : %d \n" , sensor_atual, leitura);
         }

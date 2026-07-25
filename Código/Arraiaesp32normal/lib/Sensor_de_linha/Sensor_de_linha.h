@@ -14,9 +14,6 @@
 #define PRETO                        0
 #define COR_LINHA               BRANCO
 
-// Macros dos sensores
-#define N_SENSORES_FRONTAIS     9
-#define N_SENSORES_LATERAIS     4
 
 // Macros de calibração dos sensores
 #define TEMPO_DE_CALIBRACAO             6000 //ms

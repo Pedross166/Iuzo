@@ -10,6 +10,11 @@
 
 extern CRGB leds[NUMERO_DE_LEDS];
 
+#if robo == BIARO
+extern CRGB ledsprincipal[3];
+#endif
+
+
 void led_setup();
 void cor_led(int indice, int r, int g, int b);
 void troca_led_bluetooth(String string_cor);
